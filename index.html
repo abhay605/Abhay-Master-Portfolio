@@ -1,69 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <meta charset="UTF-8">
-    <title>Abhay Sharma | Web Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Abhay Sharma | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body{
+    background:#0b0f1a;
+    color:#fff;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+.logo{
+    font-size:26px;
+    font-weight:700;
+}
+.logo span{
+    color:#facc15;
+}
+nav a{
+    margin:0 15px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+}
+nav a:hover{
+    color:#facc15;
+}
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 60px;
+    min-height:90vh;
+}
+.hero-left{
+    max-width:600px;
+}
+.hero-left h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+.hero-left h2{
+    font-size:56px;
+    font-weight:800;
+}
+.hero-left h2 span{
+    color:#facc15;
+}
+.tag{
+    margin:20px 0;
+    display:inline-block;
+    padding:10px 20px;
+    border:1px solid #facc15;
+    border-radius:30px;
+    color:#facc15;
+}
+.hero-left p{
+    margin:20px 0;
+    line-height:1.7;
+    color:#cbd5e1;
+}
+.buttons{
+    margin-top:30px;
+}
+.buttons a{
+    padding:14px 28px;
+    border-radius:30px;
+    margin-right:15px;
+    text-decoration:none;
+    font-weight:600;
+}
+.btn-primary{
+    background:#facc15;
+    color:#000;
+}
+.btn-outline{
+    border:1px solid #facc15;
+    color:#facc15;
+}
+.socials{
+    margin-top:30px;
+}
+.socials a{
+    margin-right:15px;
+    font-size:20px;
+    color:#fff;
+}
+.socials a:hover{
+    color:#facc15;
+}
+.hero-right{
+    position:relative;
+}
+.hero-right::before{
+    content:"";
+    position:absolute;
+    width:340px;
+    height:340px;
+    border-radius:50%;
+    background:radial-gradient(circle,#facc15,#000);
+    filter:blur(25px);
+    z-index:-1;
+}
+.hero-right img{
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #facc15;
+}
+.stats{
+    display:flex;
+    justify-content:space-around;
+    background:#020617;
+    padding:25px;
+    margin:0 60px 40px;
+    border-radius:20px;
+}
+.stats div{
+    text-align:center;
+}
+.stats h3{
+    color:#facc15;
+    font-size:26px;
+}
+.stats p{
+    font-size:14px;
+    color:#cbd5e1;
+}
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero-right{
+        margin-top:40px;
+    }
+    header{
+        flex-direction:column;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header class="main-header">
-    <div class="logo">
-        <span class="logo-icon">&lt;/&gt;</span>
-        <span class="logo-text">abhay.web</span>
-    </div>
-
-    <div class="menu-icon" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-    </div>
-
-   <nav class="nav-links">
-    <a href="#" onclick="openTab('index.html')">Home</a>
-    <a href="#" onclick="openTab('about.html')">About</a>
-    <a href="#" onclick="openTab('skills.html')">Skills</a>
-    <a href="#" onclick="openTab('education.html')">Education</a>
-    <a href="#" onclick="openTab('project.html')">Projects</a>
-    <a href="#" onclick="openTab('contact.html')">Contact</a>
-</nav>
+<header>
+    <div class="logo">&lt;/&gt; <span>abhay.web</span></div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Skills</a>
+        <a href="#">Education</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
 </header>
 
 <section class="hero">
     <div class="hero-left">
-        <h1>Hi There,</h1>
-        <h2>I'm <span>Abhay Sharma</span></h2>
+        <h1>Hi There, I'm</h1>
+        <h2><span>Abhay</span> Sharma</h2>
+
+        <div class="tag">Full Stack Web Developer</div>
 
         <p>
-            I am a passionate web developer from Mumbai, India.
-            I enjoy creating responsive and user-friendly websites.
-            I am continuously learning new technologies and improving my
-            skills in frontend and backend development.
+            Passionate web developer from Mumbai, India.
+            I build modern, responsive and user-friendly websites
+            using HTML, CSS, JavaScript and modern technologies.
         </p>
 
-        <a href="#" class="btn">About Me</a>
+        <div class="buttons">
+            <a href="#" class="btn-primary">View My Work</a>
+            <a href="#" class="btn-outline">Contact Me</a>
+        </div>
 
         <div class="socials">
-            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
 
     <div class="hero-right">
-        <!-- ADD YOUR IMAGE -->
-        <img src="https://img.freepik.com/premium-photo/businessman-cartoon-flat-design-isolated-white_776894-125357.jpg?semt=ais_user_personalization&w=740&q=80" alt="Abhay Sharma">
+        <!-- YOUR IMAGE -->
+        <img src="images/abhay.jpg" alt="Abhay Sharma">
     </div>
 </section>
 
-<script src="script.js"></script>
+<section class="stats">
+    <div>
+        <h3>10+</h3>
+        <p>Projects</p>
+    </div>
+    <div>
+        <h3>500+</h3>
+        <p>GitHub Commits</p>
+    </div>
+    <div>
+        <h3>100%</h3>
+        <p>Client Satisfaction</p>
+    </div>
+    <div>
+        <h3>2+</h3>
+        <p>Years Learning</p>
+    </div>
+</section>
+
 </body>
 </html>
-
